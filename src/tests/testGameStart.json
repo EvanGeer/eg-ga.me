@@ -1,0 +1,57 @@
+{
+  "games": {
+    "vrQdEMhu1YaYsyShluGqTuL34G72": {
+      "game1": {
+        "id": "game1",
+        "name": "New Game",
+        "players": [
+          {
+            "name": "Player 1",
+            "points": 10
+          },
+          {
+            "name": "Player 2",
+            "points": 3
+          }
+        ],
+        "turn": 0,
+        "isActive": true
+      },
+      "game2": {
+        "id": "game2",
+        "name": "McGee v McPhee",
+        "players": [
+          {
+            "name": "Maggie McGee",
+            "points": 42
+          },
+          {
+            "name": "EeGee McPhee",
+            "points": 19
+          }
+        ],
+        "turn": 1,
+        "isActive": true
+      }
+    },
+    "wsrkD4SMLYeJm4B5ufqoZdtaov52": 
+    { "game21":
+      {
+        "id": "game21",
+        "name": "FireGame",
+        "players": [
+          {
+            "name": "Maggie Macanfire",
+            "points": 42
+          },
+          {
+            "name": "Guy Firey",
+            "points": 19
+          }
+        ],
+        "turn": 1,
+        "isActive": true
+      }
+    }
+  }
+}
