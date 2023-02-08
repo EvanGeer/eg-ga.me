@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/eg-ga.me/static/css/main.3b452edd.css",
+    "main.js": "/eg-ga.me/static/js/main.59bfe95d.js",
+    "static/js/787.53a458d4.chunk.js": "/eg-ga.me/static/js/787.53a458d4.chunk.js",
+    "index.html": "/eg-ga.me/index.html",
+    "main.3b452edd.css.map": "/eg-ga.me/static/css/main.3b452edd.css.map",
+    "main.59bfe95d.js.map": "/eg-ga.me/static/js/main.59bfe95d.js.map",
+    "787.53a458d4.chunk.js.map": "/eg-ga.me/static/js/787.53a458d4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b452edd.css",
+    "static/js/main.59bfe95d.js"
+  ]
+}
