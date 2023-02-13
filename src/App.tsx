@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "./images/logo.svg";
 import "./App.css";
+import "./components/Game.css";
 import Login from "./firebase/Login";
 import { PlayerCard } from "./components/PlayerCard";
 import { Player } from "./interfaces/Player";
@@ -60,7 +61,7 @@ function App() {
 
     });
 
-    if(!user) setGame(null);
+    if (!user) setGame(null);
   }, [user]);
 
   function handlePointsChange(i: number, newScore: number) {
@@ -69,9 +70,9 @@ function App() {
     newGame.players = [...newGame.players];
     newGame.players[i].points = newScore;
 
-    newGame.players.forEach((x,i) => console.log(`${game.players[i].points} =>> ${x.points}`))
+    newGame.players.forEach((x, i) => console.log(`${game.players[i].points} =>> ${x.points}`))
 
-    
+
     setGame(newGame);
     set(ref(db, `games/${user?.uid}/${game.id}`), newGame);
   }
@@ -112,20 +113,27 @@ function App() {
           </div>
         ) : null}
 
-        { game && game?.players ?
-        games[game.id].players.map((p: Player, i: number) => {
-          console.log(games);
-          console.log(`inline render ${p.points}`);
-          console.log(p);
+        {game && game?.players ?
+          <>
+          {games[game.id].name}
+            <div className="game-board">
+              {/* games */}
+              {games[game.id].players.map((p: Player, i: number) => {
+                console.log(games);
+                console.log(`inline render ${p.points}`);
+                console.log(p);
 
-          return <PlayerCard
-          key={p.name}
-          initialScore={p.points}
-          playerName={p.name}
-          onPointsChange={(points) => handlePointsChange(i, points)}
-          />
-        }
-        ) : null}
+                return <PlayerCard
+                  key={p.name}
+                  initialScore={p.points}
+                  playerName={p.name}
+                  onPointsChange={(points) => handlePointsChange(i, points)}
+                />
+              })
+              }
+            </div>
+          </>
+          : null}
       </header>
     </div>
   );

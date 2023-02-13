@@ -1,0 +1,72 @@
+.player-card {
+    border: 1px solid;
+    border-color: #7793af;
+    background-color: #282c34;
+    padding: 4px;
+    border-radius: 8px;
+    margin: 8px;
+    box-shadow: #6cb3fbaa 2px 2px 16px;
+}
+
+.point-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.increment-button {
+    background: #338be4aa;
+    border: 1px solid dodgerblue;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    margin: 8px;
+    height: 40px;
+}
+.increment-button:hover {
+    background-color: #338be4ff;
+}
+.increment-button:active {
+    background-color: #6cb3fb;
+}
+
+.score {
+    grid-column: 2/2 span;
+    grid-row: 1;
+    align-content: center;
+    font-size: xx-large;
+}
+
+.minus-1 {
+    grid-column: 1;
+    grid-row: 1;
+
+    height: 50px;
+    width: 40px;
+}
+
+.minus-5 {
+    grid-column: 2;
+    grid-row: 2;
+}
+.minus-10 {
+    grid-column: 1;
+    grid-row: 2;
+
+}
+.plus-1 {
+    height: 50px;
+    width: 40px;
+    grid-row: 1;
+    grid-column: 4;
+
+
+}
+.plus-5 {
+    grid-column: 3;
+    grid-row: 2;
+
+}
+.plus-10 {
+    grid-column: 4;
+    grid-row: 2;
+}

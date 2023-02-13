@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Player } from "../interfaces/Player";
+import "./PlayerCard.css"
 
-export function PlayerCard({playerName, initialScore, onPointsChange} 
-    : {playerName: string, initialScore: number, onPointsChange: (newScore:number) => void}) {
+export function PlayerCard({ playerName, initialScore, onPointsChange }
+    : { playerName: string, initialScore: number, onPointsChange: (newScore: number) => void }) {
 
     console.log(`PlayerCard rendered ${initialScore}`);
 
@@ -17,8 +18,25 @@ export function PlayerCard({playerName, initialScore, onPointsChange}
 
     return <div className="player-card">
         <div>{playerName}</div>
-        <button type='button' onClick={() => add(-1)}>-</button>
-        &nbsp;{initialScore}&nbsp;
-        <button type='button' onClick={() => add(1)}>+</button>
+        <div className="point-grid">
+            <button type='button'
+                className="increment-button minus-1"
+                onClick={() => add(-1)}>-</button>
+            <div className="score">{initialScore}</div>
+            <button type='button'
+                className="increment-button plus-1"
+                onClick={() => add(1)}>+</button>
+            <button type='button'
+                className="increment-button plus-10"
+                onClick={() => add(10)}>+10</button>
+            <button type='button'
+                className="increment-button plus-5"
+                onClick={() => add(5)}>+5</button>
+            <button type='button'
+                className="increment-button minus-10"
+                onClick={() => add(-10)}>-10</button>
+            <button type='button'
+                className="increment-button minus-5"
+                onClick={() => add(-5)}>-5</button>        </div>
     </div>
 }
